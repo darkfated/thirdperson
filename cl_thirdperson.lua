@@ -28,7 +28,24 @@ concommand.Add( 'person_menu', function()
 	menu:SetSize( math.min( 300, ScrW() * 0.2 ), 144 )
 	menu:Center()
 	menu:MakePopup()
+	menu:ShowCloseButton( false )
 	menu:SetTitle( 'Third Person Settings' )
+	menu.Paint = function( self, w, h )
+		draw.RoundedBox( 8, 0, 0, w, h, Color(54,54,54) )
+		draw.RoundedBox( 8, 0, 0, w, 24, Color(69,69,69) )
+		draw.RoundedBox( 0, 0, 16, w, 8, Color(69,69,69) )
+	end
+
+	local cls = vgui.Create( 'DButton', menu )
+	cls:SetSize( 16, 16 )
+	cls:SetPos( menu:GetWide() - cls:GetWide() - 4, 4 )
+	cls:SetText( '' )
+	cls.DoClick = function()
+		menu:Close()
+	end
+	cls.Paint = function( self, w, h )
+		draw.RoundedBox( 50, 0, 0, w, h, Color(253,116,92))
+	end
 
 	local Checkbox = menu:Add( 'DCheckBoxLabel' )
 	Checkbox:Dock( TOP )
