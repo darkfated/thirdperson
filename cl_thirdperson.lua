@@ -1,7 +1,7 @@
 CreateClientConVar( 'third_person', 0, true )
 CreateClientConVar( 'third_person_ud', 0, true )
 CreateClientConVar( 'third_person_rl', 0, true )
-CreateClientConVar( 'third_person_fb', -30, true )
+CreateClientConVar( 'third_person_fb', -60, true )
 CreateClientConVar( 'third_person_ang', 0, true )
 
 hook.Add( 'ShouldDrawLocalPlayer', 'FrelDrawPlayer', function()
