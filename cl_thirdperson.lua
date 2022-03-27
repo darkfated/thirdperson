@@ -90,3 +90,14 @@ concommand.Add( 'person_menu', function()
 	slider_ang:SetDecimals( 0 )
 	slider_ang:SetConVar( 'third_person_ang' )
 end )
+
+// For Sandbox
+
+list.Set( 'DesktopWindows', 'PersonMenu', {
+	title = 'Third Person',
+	icon = 'icon16/cake.png',
+	onewindow = false,
+	init = function()
+		RunConsoleCommand( 'person_menu' )
+	end
+} )
