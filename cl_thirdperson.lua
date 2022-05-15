@@ -25,6 +25,10 @@ hook.Add( 'CalcView', 'FrelCalcView', function( pl, origin, ang, fov )
 end )
 
 concommand.Add( 'person_menu', function()
+	local color_header = Color(69,69,69)
+	local color_background = Color(54,54,54)
+	local color_close = Color(253,116,92)
+
 	local menu = vgui.Create( 'DFrame' )
 	menu:SetSize( math.min( 300, ScrW() * 0.2 ), 175 )
 	menu:Center()
@@ -32,9 +36,9 @@ concommand.Add( 'person_menu', function()
 	menu:ShowCloseButton( false )
 	menu:SetTitle( 'Third Person Settings' )
 	menu.Paint = function( self, w, h )
-		draw.RoundedBox( 8, 0, 0, w, h, Color(54,54,54) )
-		draw.RoundedBox( 8, 0, 0, w, 24, Color(69,69,69) )
-		draw.RoundedBox( 0, 0, 16, w, 8, Color(69,69,69) )
+		draw.RoundedBox( 8, 0, 0, w, h, color_background )
+		draw.RoundedBox( 8, 0, 0, w, 24, color_header )
+		draw.RoundedBox( 0, 0, 16, w, 8, color_header )
 	end
 
 	local cls = vgui.Create( 'DButton', menu )
@@ -45,7 +49,7 @@ concommand.Add( 'person_menu', function()
 		menu:Close()
 	end
 	cls.Paint = function( self, w, h )
-		draw.RoundedBox( 50, 0, 0, w, h, Color(253,116,92))
+		draw.RoundedBox( 50, 0, 0, w, h, color_close )
 	end
 
 	local Checkbox = menu:Add( 'DCheckBoxLabel' )
