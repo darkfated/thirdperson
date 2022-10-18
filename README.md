@@ -1,4 +1,4 @@
-# thirdperson
+# Thirdperson
 Thirdperson for Gmod with position setting
  
 <img src="https://i.imgur.com/MPOBSWt.jpeg" width="300"/>
