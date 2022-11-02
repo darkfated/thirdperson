@@ -1,8 +1,8 @@
 CreateClientConVar( 'third_person', 0, true )
-CreateClientConVar( 'third_person_ud', 0, true )
-CreateClientConVar( 'third_person_rl', 0, true )
-CreateClientConVar( 'third_person_fb', -60, true )
-CreateClientConVar( 'third_person_ang', 0, true )
+CreateClientConVar( 'third_person_ud', 0, true, false, '', -15, 15 )
+CreateClientConVar( 'third_person_rl', 0, true, false, '', -20, 20 )
+CreateClientConVar( 'third_person_fb', -60, true, false, '', -120, 30 )
+CreateClientConVar( 'third_person_ang', 0, true, false, '', -45, 45 )
 
 hook.Add( 'ShouldDrawLocalPlayer', 'FrelDrawPlayer', function()
 	if ( GetConVar( 'third_person' ):GetBool() ) then
