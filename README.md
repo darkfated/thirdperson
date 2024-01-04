@@ -2,6 +2,7 @@
 Thirdperson for Gmod with position setting
 
 Console command to open the menu: `third_person_menu`
+
 And for quick switching between views: `third_person_toggle`
  
  ## Screenshot of the settings menu
