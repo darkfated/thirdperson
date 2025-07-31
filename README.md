@@ -1,6 +1,6 @@
 # Just Thirdperson
 
-Thirdperson for GMod with position setting.
+Thirdperson for Garry's Mod with position setting.
 
 - Console command to open the menu: `third_person_menu`
 - For quick switching between views: `third_person_toggle`
