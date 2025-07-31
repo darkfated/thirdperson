@@ -147,7 +147,7 @@ end)
 // For Sandbox
 list.Set('DesktopWindows', 'ThirdPersonMenu', {
     title = 'Third Person',
-    icon = 'icon16/cake.png',
+    icon = 'thirdperson/icon.png',
     onewindow = false,
     init = function()
         RunConsoleCommand('third_person_menu')
